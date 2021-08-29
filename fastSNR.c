@@ -9,7 +9,7 @@ void printh(int vec[], int n);
 double signalNoise(int vec[]);
 
 int main() {
-    const int n = 10; 
+    const int n = 100; 
     const int ntests = 1000; // number of tests to conduct
     int success = 0; // increments if test succeeds
     int x; // psuedorandom index of array
@@ -34,7 +34,7 @@ int main() {
     for(int t = 0; t <ntests; t++){
     //generate array
     	srand(t + time(NULL)); 
-    	for( int i = 0; i < 10; i++){
+    	for( int i = 0; i < n; i++){
 		array[i] = rand() % 1000 + 1;
     	}
    

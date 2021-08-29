@@ -30,10 +30,10 @@ int main() {
 		printf("calloc size %d failed!\n", n);
 		exit(1);
 	}
-    //iterate through 100 rounds of testing
+    //iterate through 1000 rounds of testing
     for(int t = 0; t <ntests; t++){
     //generate array
-    	srand(time(NULL)); //replace +t
+    	srand(t + time(NULL)); 
     	for( int i = 0; i < 10; i++){
 		array[i] = rand() % 1000 + 1;
     	}
@@ -52,10 +52,11 @@ int main() {
 
    	//printf("\n");
    //build heap
-    	//printh(array, n);
+    	printh(array, n);
 	buildNodes(array, n);
-	//printf("\n");
-	//printh(array, n);
+	printf(" <-> ");
+	printh(array, n);
+	printf("\n");
    //test heap
 	for(int h = 3; h < n; h++){
 		if(array[0] < array[h] || array[1] < array[h] || array[2] < array[h]){
@@ -142,7 +143,6 @@ void printh(int vec[], int n){
 	for(int i = 0; i < n; i ++){
 		printf("%d ", vec[i]);
 	}
-	printf("\n");
 }
 double signalNoise(int vec[]){
 	if(vec[2] >= vec[1]){

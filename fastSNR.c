@@ -15,9 +15,11 @@ void printh(int vec[], int n);
 double signalNoise(int vec[]);
 double log10(double x);
 
-int main() {
-    const int n = 1000;
-    const int ntests = 10000; // number of tests to conduct
+int main(int argc, char *argv[]) {
+    //needs error handling of args
+    printf("n = %s :: ntests = %s  \n", argv[1], argv[2]);
+    const int n = atoi(argv[1]);
+    const int ntests = atoi(argv[2]); // number of tests to conduct
     int success = 0; // increments if test succeeds
     int x; // psuedorandom index of array
     int y; // psuedorandom index of array

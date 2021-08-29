@@ -1,4 +1,5 @@
 fastSNR.c contains the c code for the fastSNR function.
+
 fastSNR.r is the equivalent R code
 
 fastSNR simply takes the highest two values from an array and computes the quotient (MAX/2nd_MAX). 

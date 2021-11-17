@@ -8,6 +8,7 @@ void buildNodes(int vec[], int n);
 void printh(int vec[], int n);
 double signalNoise(int vec[]);
 
+//the main function runs ntests number of pseudorandom test arrays with fastSNR.
 int main() {
     const int n = 100; 
     const int ntests = 1000; // number of tests to conduct
@@ -30,7 +31,7 @@ int main() {
 		printf("calloc size %d failed!\n", n);
 		exit(1);
 	}
-    //iterate through 1000 rounds of testing
+    //iterate through ntests rounds of testing
     for(int t = 0; t <ntests; t++){
     //generate array
     	srand(t + time(NULL)); 

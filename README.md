@@ -1,4 +1,4 @@
-fastSNR is a for-fun project to beat the performance of its equivalent R code.
+fastSNR is a for-fun project to beat the performance of its equivalent R code. (signalNoise.r
 
 A useful metric for evaluating signal to noise in arrays of hashed-nuclei barcode counts is to divide the first maximum by the second maximum.
 
